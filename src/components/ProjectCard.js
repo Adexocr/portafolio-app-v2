@@ -4,7 +4,7 @@ import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native';
 export default function ProjectCard({ project, onPress }) {
   return (
     <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={0.8}>
-      <Image source={{ uri: project.image }} style={styles.image} />
+      <Image source={project.image} style={styles.image} resizeMode= 'contain' />
       <View style={styles.info}>
         <Text style={styles.title}>{project.title}</Text>
         <Text style={styles.desc} numberOfLines={2}>{project.shortDescription}</Text>
@@ -22,7 +22,7 @@ export default function ProjectCard({ project, onPress }) {
 
 const styles = StyleSheet.create({
   card: { backgroundColor: '#F5F5F5', borderRadius: 16, marginBottom: 16, overflow: 'hidden', elevation: 3, shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 6, shadowOffset: { width: 0, height: 2 } },
-  image: { width: '100%', height: 150 },
+  image: { width: '100%', height: 150 , resizeMode: 'contain'},
   info: { padding: 14 },
   title: { fontSize: 17, fontWeight: '700', marginBottom: 4, color: '#1A1A1A' },
   desc: { fontSize: 13, marginBottom: 10, color: '#666666' },

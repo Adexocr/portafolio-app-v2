@@ -6,7 +6,7 @@ export default function ProjectDetailScreen({ route }) {
 
   return (
     <ScrollView style={{ backgroundColor: '#FFFFFF' }}>
-      <Image source={{ uri: project.image }} style={styles.image} />
+      <Image source={project.image} style={styles.image} />
       <View style={styles.content}>
         <Text style={styles.title}>{project.title}</Text>
 
