@@ -15,7 +15,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <ScrollView style={{ backgroundColor: theme.background }}>
       <LinearGradient colors={theme.gradient} style={styles.header}>
-        <Image source={{ uri: 'https://via.placeholder.com/150' }} style={styles.avatar} />
+        <Image source={require('../../assets/images/avatar.jpg')} style={styles.avatar} />
         <Text style={styles.name}>Ade</Text>
         <Text style={styles.subtitleOnGradient}>Desarrollador Móvil en formación</Text>
       </LinearGradient>
